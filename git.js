@@ -41,3 +41,5 @@
 //! branch
 //* git branch -> list all local branch
 //* git branch <branch_name> -> create new branch
+//* git switch <branch_name>
+//* git switch -c <branch_name> -> create and switch to new branch
