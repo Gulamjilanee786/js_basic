@@ -34,6 +34,7 @@
 
 //?  git add    git commit  git push origin <branch_name>
 //* git add <file.path>
+//* git add.
 //* git commit -m "<commit_message>"
 
 // u, m, a
@@ -41,3 +42,25 @@
 //! branch
 //* git branch -> list all local branch
 //* git branch <branch_name> -> create new branch
+//* git switch <branch_name>
+//* git switch -c <branch_name>  ->create & switch to new branch
+
+//* merge
+// git merge <branch_name>
+
+//* git log
+//* git log --oneline
+//* git log --oneline origin/main.main
+//* git log --oneline test.main
+
+//* diff
+//* git diff origin/main.main
+//* git diff test..main
+//* git diff main..test
+
+
+//! merge conflict
+
+//* pull request
+//? main -> production
+//? develop -> integration
