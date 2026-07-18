@@ -1,7 +1,7 @@
 //* git -> vcs
-//* github -> gitlab , bitbucket
+//* github ->  gitlab , bitbucket
 
-// setup -> v1
+// setup   -> v1
 
 // home page -> v2
 
@@ -9,16 +9,15 @@
 
 // login -> v4
 
-//* ! config
-//* git config --global --list ->list global config
-//* git config --global user.name '<your_name>'
-//* git config --global user.gmail '<your_email>'
-//* git config --global init.defaultbranch 'main'
+//! config
+//* git config --global --list       -> list global config
+//* git config --global user.name  '<your_name>'
+//* git config --global user.email  '<your_email>'
+//* git config --global init.defaultbranch main
 //* git config --global pull.rebase false
 
-
-
 //? repository / repo
+// folder + .git
 // project + history
 
 //? local repo
@@ -28,39 +27,88 @@
 //* git init
 
 //? workflow
-// working directory  ->ready-sate  ->local repo version -> remote repo
-// working directory -> staging area ->local repo
-// change            -> stage changed -> version
-
-//?  git add    git commit  git push origin <branch_name>
-//* git add <file.path>
-//* git add.
+// working directory   -> ready-sate       -> local repo version   -> remote repo
+// working directory    -> staging area   -> local repo
+//  changes             -> staged changed  -> version
+//?                           git add       git commit                 git push origin <branch_name>
+//* git add <file_path>
+//* git add .
 //* git commit -m "<commit_message>"
+//* git push origin <branch_name>
 
-// u, m, a
+// u , m , a
 
 //! branch
-//* git branch -> list all local branch
-//* git branch <branch_name> -> create new branch
-//* git switch <branch_name>
-//* git switch -c <branch_name>  ->create & switch to new branch
+//* git branch   -> list all local branch
+//* git branch <branch_name>   -> create new branch
+//* git switch <branch_name>   // =>  git checkout <branch_name>
+//* git switch -c <branch_name>   //  git checkout -b <branch_name>  -> create & switch to new branch
 
-//* merge
-// git merge <branch_name>
+//! merge
+//* git merge <branch_name>
 
 //* git log
 //* git log --oneline
-//* git log --oneline origin/main.main
-//* git log --oneline test.main
+//* git log --oneline origin/main..main
+//* git log --oneline test..main
 
-//* diff
-//* git diff origin/main.main
+//! diff
+//* git diff origin/main..main
 //* git diff test..main
 //* git diff main..test
 
+//!  remote
+//* git remote add origin <remote_url>
+//* git remote -v
+//* git remote remove origin
 
 //! merge conflict
 
 //* pull request
-//? main -> production
-//? develop -> integration
+
+//? main  -> production
+//? develop  -> integration
+//? feature  ->
+//? fix   -> bug fix
+//? hotfix -> critical bug fix
+
+//todo: revert , reset , cherry-pick , rebase
+//? stash
+
+//* git commit  --amend -m "new message"  -> edit last commit message
+//* git commit -am 'add & commit'
+// error
+//* git reset <commit_id>
+//* git reset HEAD~n  -> n = 1,2,3,4,5
+//* --soft   -> staged
+//* --mixed   -> changes
+//* --hard   -> delete changes
+
+//* git stash -> stash changes
+//* git stash -m "<message>" -> stash changes with message
+//* git stash pop  -> Apply & drop  last stash change
+//* git stash apply  -> Apply   last stash change
+//* git stash apply stash@{n} -> Apply  n stash change
+//* git stash drop -> drop   last stash change
+//* git stash clear -> drop   all stash change
+//* git stash list  -> list stashed changes
+//changes
+//changes
+//changes
+//changes
+//changes
+//changes
+
+// main: a -> b -> d
+// login : e  -> f -> g
+
+// main: git cherry-pick <f_commit_id>  => a -> b -> d -> f
+
+//*rebase:
+//? main: a -> b -> d -> h
+//? login :         e  -> f
+
+//? login: git rebase main   ->  a -> b -> d -> h -> e'  -> f'
+
+//!  git rebase continue
+//! git rebase abort
